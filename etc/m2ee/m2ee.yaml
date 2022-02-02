@@ -21,8 +21,8 @@ m2ee:
     [
       "-Dfile.encoding=UTF-8",
       "-Djava.io.tmpdir=BUILD_PATH/data/tmp",
-      "-XX:OnError=kill -s USR1 PYTHONPID",
-      "-XX:OnOutOfMemoryError=kill -s USR2 PYTHONPID",
+      "-XX:+HeapDumpOnOutOfMemoryError",
+      "-XX:HeapDumpPath=/home/vcap/app/data/tmp/heap.prof"
     ]
 
   jetty:
